@@ -24,7 +24,7 @@ project Carproject is
          case ADL_BUILD is
 
             when "Debug" =>
-               for Main use ("sensortest.adb", "main.adb");
+               for Main use ("motortest.adb", "sensortest.adb", "main.adb");
 
             when "Production" =>
                for Main use ("main.adb");
