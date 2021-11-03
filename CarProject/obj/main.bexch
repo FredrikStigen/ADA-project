@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\carproject.gpr
+20211103130226 4d5f3701a565abfedd6bf7f5978e7d04
+C:\Users\Stigen\Documents\GitHub\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr
+20210927093454 ada6769a1e96a64ef441688fc8fff447
+[BOUND OBJECT FILES]
+C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\obj\
+-LC:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\obj\
+-LC:\Users\Stigen\Documents\GitHub\Ada_Drivers_Library\boards\MicroBit_v2\obj\full_lib_Debug\
+-LC:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\
+-static
+-static-libgcc
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnarl.a
+C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\adalib\libgnat.a
