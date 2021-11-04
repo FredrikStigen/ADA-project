@@ -63,14 +63,19 @@ end Forward;
    sensor1 : Boolean;
    x : integer := 0;
 begin
-   sensor1 := MicroBit.IOsForTasking.Set(4);
+   
    
    loop
-      if sensor1 = False then
-         if x = 0 then
-            x := Forward(x);
-         end if;
-      end loop;
+      
+      sensor1 := MicroBit.IOsForTasking.Set(4);
+      Put_Line("Sensor1 " & boolean'image(sensor1));
+      delay 1.0;
+
+      --  if sensor1 = False then
+      --     if x = 0 then
+      --        x := Forward(x);
+      --     end if;
+      --  end loop;
 
       
       --  if x = 0 then

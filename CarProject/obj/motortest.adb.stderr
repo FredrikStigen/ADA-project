@@ -1,2 +1,0 @@
-motortest.adb:72:10: error: "end if;" expected for "if" at line 70
-motortest.adb:73:07: error: "end if;" expected for "if" at line 69

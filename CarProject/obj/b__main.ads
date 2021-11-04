@@ -72,6 +72,8 @@ package ada_main is
    --  system.wch_jis%b
    --  system.wch_cnv%s
    --  system.wch_cnv%b
+   --  ada.text_io%s
+   --  ada.text_io%b
    --  system.address_image%s
    --  system.address_image%b
    --  system.traceback%s
@@ -147,6 +149,12 @@ package ada_main is
    --  system.traceback.symbolic%s
    --  system.traceback.symbolic%b
    --  ada.exceptions%b
+   --  ada.real_time%s
+   --  ada.real_time%b
+   --  ada.real_time.delays%s
+   --  ada.real_time.delays%b
+   --  system.relative_delays%s
+   --  system.relative_delays%b
    --  main%b
    --  END ELABORATION ORDER
 

@@ -31,8 +31,8 @@ W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-D b__motortest.ads	20211103165800 155183b2 ada_main%s
-D b__motortest.adb	20211103165800 2a07a054 ada_main%b
+D b__motortest.ads	20211104153932 155183b2 ada_main%s
+D b__motortest.adb	20211104153932 2a07a054 ada_main%b
 D system.ads		20210927104348 ad54c63c system%s
 D s-parame.ads		20210927104346 8e90778f system.parameters%s
 D s-secsta.ads		20210927104346 56a2861c system.secondary_stack%s
@@ -44,7 +44,7 @@ G c Z s b [main ada_main 25 14 none]
 G c Z b b [Tsec_default_sized_stacksBIP ada_main 46 4 none]
 G c Z b b [ada_main_program ada_main 211 14 none]
 X 1 b__motortest.ads
-6K9*ada_main 257l5 257e13 2|7b14 244l5 244t13
+6K9*ada_main 259l5 259e13 2|7b14 244l5 244t13
 9a4*GNAT_Version{string} 11r22 13r54
 13m4*GNAT_Version_Address{3|80M9} 14r22
 16a4*Ada_Main_Program_Name{string} 17r22 2|222r52

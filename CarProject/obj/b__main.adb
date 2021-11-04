@@ -6,12 +6,14 @@ pragma Suppress (Overflow_Check);
 
 package body ada_main is
 
-   E067 : Short_Integer; pragma Import (Ada, E067, "ada__tags_E");
-   E058 : Short_Integer; pragma Import (Ada, E058, "ada__strings__text_buffers_E");
-   E056 : Short_Integer; pragma Import (Ada, E056, "system__bb__timing_events_E");
-   E009 : Short_Integer; pragma Import (Ada, E009, "ada__exceptions_E");
-   E102 : Short_Integer; pragma Import (Ada, E102, "system__soft_links_E");
-   E100 : Short_Integer; pragma Import (Ada, E100, "system__exception_table_E");
+   E006 : Short_Integer; pragma Import (Ada, E006, "ada__text_io_E");
+   E109 : Short_Integer; pragma Import (Ada, E109, "ada__tags_E");
+   E100 : Short_Integer; pragma Import (Ada, E100, "ada__strings__text_buffers_E");
+   E098 : Short_Integer; pragma Import (Ada, E098, "system__bb__timing_events_E");
+   E029 : Short_Integer; pragma Import (Ada, E029, "ada__exceptions_E");
+   E051 : Short_Integer; pragma Import (Ada, E051, "system__soft_links_E");
+   E049 : Short_Integer; pragma Import (Ada, E049, "system__exception_table_E");
+   E016 : Short_Integer; pragma Import (Ada, E016, "ada__real_time_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -83,11 +85,11 @@ package body ada_main is
       end if;
       Is_Elaborated := True;
       Main_Priority := -1;
-      Time_Slice_Value := -1;
+      Time_Slice_Value := 0;
       WC_Encoding := 'b';
-      Locking_Policy := ' ';
+      Locking_Policy := 'C';
       Queuing_Policy := ' ';
-      Task_Dispatching_Policy := ' ';
+      Task_Dispatching_Policy := 'F';
       Priority_Specific_Dispatching :=
         Local_Priority_Specific_Dispatching'Address;
       Num_Specific_Dispatching := 0;
@@ -105,18 +107,22 @@ package body ada_main is
 
       Runtime_Initialize (1);
 
+      Ada.Text_Io'Elab_Body;
+      E006 := E006 + 1;
       Ada.Strings.Text_Buffers'Elab_Spec;
-      E058 := E058 + 1;
+      E100 := E100 + 1;
       System.Bb.Timing_Events'Elab_Spec;
-      E056 := E056 + 1;
+      E098 := E098 + 1;
       Ada.Exceptions'Elab_Spec;
       System.Soft_Links'Elab_Spec;
       Ada.Tags'Elab_Body;
-      E067 := E067 + 1;
+      E109 := E109 + 1;
       System.Exception_Table'Elab_Body;
-      E100 := E100 + 1;
-      E102 := E102 + 1;
-      E009 := E009 + 1;
+      E049 := E049 + 1;
+      E051 := E051 + 1;
+      E029 := E029 + 1;
+      Ada.Real_Time'Elab_Body;
+      E016 := E016 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
