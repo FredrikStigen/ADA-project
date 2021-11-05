@@ -14,6 +14,14 @@
       <vfs_project />
       <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\src\main.adb</vfs_file>
     </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project />
+      <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\carproject.gpr</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 19" >
+      <vfs_project />
+      <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\src\sensortest.adb</vfs_file>
+    </file_marker>
     <file_marker current="true" column=" 1" line=" 1" >
       <vfs_project />
       <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\carproject.gpr</vfs_file>

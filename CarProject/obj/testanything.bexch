@@ -1,16 +1,16 @@
 [GENERATED OBJECT FILE]
-b__motortest.o
+b__testanything.o
 [PROJECT FILES]
 C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\carproject.gpr
 20211105084234 4b59bc4cda08ad158cfe161c0b9cec2a
 C:\Users\Stigen\Documents\GitHub\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr
 20210927093454 ada6769a1e96a64ef441688fc8fff447
 [BOUND OBJECT FILES]
-C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\obj\motortest.o
+C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\obj\testanything.o
 [GENERATED SOURCE FILES]
-b__motortest.ads
-b__motortest.adb
-b__motortest.ali
+b__testanything.ads
+b__testanything.adb
+b__testanything.ali
 [RESULTING OPTIONS]
 -LC:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\obj\
 -LC:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\obj\

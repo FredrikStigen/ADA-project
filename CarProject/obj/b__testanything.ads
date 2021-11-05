@@ -13,7 +13,7 @@ package ada_main is
    GNAT_Version_Address : constant System.Address := GNAT_Version'Address;
    pragma Export (C, GNAT_Version_Address, "__gnat_version_address");
 
-   Ada_Main_Program_Name : constant String := "_ada_main" & ASCII.NUL;
+   Ada_Main_Program_Name : constant String := "_ada_testanything" & ASCII.NUL;
    pragma Export (C, Ada_Main_Program_Name, "__gnat_ada_main_program_name");
 
    procedure adainit;
@@ -176,8 +176,6 @@ package ada_main is
    --  system.assertions%b
    --  system.pool_global%s
    --  system.pool_global%b
-   --  system.relative_delays%s
-   --  system.relative_delays%b
    --  system.tasking.protected_objects%s
    --  system.tasking.protected_objects%b
    --  system.tasking.restricted%s
@@ -253,7 +251,7 @@ package ada_main is
    --  microbit%s
    --  microbit.iosfortasking%s
    --  microbit.iosfortasking%b
-   --  main%b
+   --  testanything%b
    --  END ELABORATION ORDER
 
 end ada_main;

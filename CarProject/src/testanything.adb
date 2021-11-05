@@ -2,8 +2,8 @@ with MicroBit.IOsForTasking;
 with ada.Text_IO; use ada.Text_IO;
 with Ada.Real_Time; use Ada.Real_Time;
 
-procedure motortest is   
-   function Forward(var : in out Integer) return integer is
+procedure testanything is
+   function RightTurn(var : in out Integer) return integer is
    begin
       while var < 200 loop
          MicroBit.IOsForTasking.Set(0, True);
@@ -29,9 +29,9 @@ procedure motortest is
          var := var + 1;
    end loop;
    return var;
-end Forward;
+end RightTurn;
 
-   function Backward(var : in out Integer) return integer is
+   function LeftTurn(var : in out Integer) return integer is
    begin
       while var > 0 loop
          MicroBit.IOsForTasking.Set(0, False);
@@ -57,15 +57,49 @@ end Forward;
          var := var - 1;
       end loop;
       return var;
-   end Backward;
+   end LeftTurn;
 
+	--function ReadSensorLeft(L : in out Boolean) return Boolean
    x : integer := 0;
+   L : Boolean;
+   C : Boolean;
+   R : Boolean;
+   test : MicroBit.IOsForTasking.Analog_Value;
+
 begin
+   --MicroBit.IOsForTasking.Write(10, 250);
+
    loop
-      if x <= 0 then
-         x := Forward(x);
-      elsif x >= 200 then
-         x := Backward(x);
-      end if;
+      test := MicroBit.IOsForTasking.Analog(4);
+      MicroBit.IOsForTasking.Write(10, test);
+      L := MicroBit.IOsForTasking.Set(5);
+      C := MicroBit.IOsForTasking.Set(6);
+      R := MicroBit.IOsForTasking.Set(7);
+      while L = True and C = False and R = False loop
+         if x <= 0 then
+            x := RightTurn(x);
+         end if;
+         L := MicroBit.IOsForTasking.Set(5);
+         C := MicroBit.IOsForTasking.Set(6);
+         R := MicroBit.IOsForTasking.Set(7);
+      end loop;
+      while R = True and C = False and L = False loop
+         if x >= 200 then
+            x:= LeftTurn(x);
+         end if;
+         L := MicroBit.IOsForTasking.Set(5);
+         C := MicroBit.IOsForTasking.Set(6);
+         R := MicroBit.IOsForTasking.Set(7);
+      end loop;
+
+
+      --  if x <= 0 then
+      --     x := Forward(x);
+      --  elsif >x = 200 then
+      --     x := Backward(x);
+      --  end if;
+      --Put_Line(integer'Image(x));
+      --delay 1.0;
+
    end loop;
-end motortest;
+end testanything;
