@@ -1,0 +1,6 @@
+test.adb:10:04: error: violation of restriction "no_task_hierarchy"
+test.adb:10:04: error: from profile "jorvik" at system.ads:42
+test.adb:11:04: error: violation of restriction "no_task_hierarchy"
+test.adb:11:04: error: from profile "jorvik" at system.ads:42
+test.adb:89:15: error: "LefttTurn" is undefined
+test.adb:89:15: error: possible misspelling of "LeftTurn"
