@@ -31,8 +31,8 @@ W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-D b__testanything.ads	20211107145048 ed63fa0d ada_main%s
-D b__testanything.adb	20211107145048 82cd9331 ada_main%b
+D b__testanything.ads	20211108091700 ed63fa0d ada_main%s
+D b__testanything.adb	20211108091700 82cd9331 ada_main%b
 D system.ads		20210927104348 ad54c63c system%s
 D s-parame.ads		20210927104346 8e90778f system.parameters%s
 D s-secsta.ads		20210927104346 56a2861c system.secondary_stack%s

@@ -1,0 +1,7 @@
+package tasking is
+   task ReadSensor with Priority => 3;
+   task RightTurn with Priority => 2;
+   task LeftTurn with Priority => 2;
+   task driveForward with Priority => 1;
+
+end tasking;

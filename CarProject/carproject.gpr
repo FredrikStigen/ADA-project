@@ -20,7 +20,7 @@ project Carproject is
          case Adl_Build is
 
             when "Debug" =>
-               for Main use ("test.adb", "testanything.adb", "motortest.adb", "sensortest.adb", "main.adb");
+               for Main use ("taskingtest.adb", "test.adb", "testanything.adb", "motortest.adb", "sensortest.adb", "main.adb");
 
             when "Production" =>
                for Main use ("main.adb");
