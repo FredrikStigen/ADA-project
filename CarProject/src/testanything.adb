@@ -5,7 +5,7 @@ with Ada.Real_Time; use Ada.Real_Time;
 procedure testanything is
    function RightTurn(var : in out Integer) return integer is
    begin
-      while var <= 100 loop
+      while var <= 50 loop
          MicroBit.IOsForTasking.Set(0, True);
          MicroBit.IOsForTasking.Set(1, False);
          MicroBit.IOsForTasking.Set(2, False);
@@ -33,7 +33,7 @@ end RightTurn;
 
    function LeftTurn(var : in out Integer) return integer is
    begin
-      while var >= -100 loop
+      while var >= -50 loop
          MicroBit.IOsForTasking.Set(0, False);
          MicroBit.IOsForTasking.Set(1, False);
          MicroBit.IOsForTasking.Set(2, False);
@@ -145,17 +145,5 @@ begin
          C := MicroBit.IOsForTasking.Set(6);
          R := MicroBit.IOsForTasking.Set(7);
       end loop;
-
-
-
-
-      --  if x <= 0 then
-      --     x := Forward(x);
-      --  elsif >x = 200 then
-      --     x := Backward(x);
-      --  end if;
-      --Put_Line(integer'Image(x));
-      --delay 1.0;
-
    end loop;
 end testanything;
