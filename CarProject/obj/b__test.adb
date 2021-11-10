@@ -6,18 +6,18 @@ pragma Suppress (Overflow_Check);
 
 package body ada_main is
 
-   E006 : Short_Integer; pragma Import (Ada, E006, "ada__text_io_E");
-   E109 : Short_Integer; pragma Import (Ada, E109, "ada__tags_E");
-   E100 : Short_Integer; pragma Import (Ada, E100, "ada__strings__text_buffers_E");
-   E098 : Short_Integer; pragma Import (Ada, E098, "system__bb__timing_events_E");
-   E029 : Short_Integer; pragma Import (Ada, E029, "ada__exceptions_E");
-   E051 : Short_Integer; pragma Import (Ada, E051, "system__soft_links_E");
-   E049 : Short_Integer; pragma Import (Ada, E049, "system__exception_table_E");
-   E016 : Short_Integer; pragma Import (Ada, E016, "ada__real_time_E");
-   E132 : Short_Integer; pragma Import (Ada, E132, "system__tasking__restricted__stages_E");
-   E130 : Short_Integer; pragma Import (Ada, E130, "tasking_E");
+   E126 : Short_Integer; pragma Import (Ada, E126, "ada__text_io_E");
+   E105 : Short_Integer; pragma Import (Ada, E105, "ada__tags_E");
+   E096 : Short_Integer; pragma Import (Ada, E096, "ada__strings__text_buffers_E");
+   E094 : Short_Integer; pragma Import (Ada, E094, "system__bb__timing_events_E");
+   E022 : Short_Integer; pragma Import (Ada, E022, "ada__exceptions_E");
+   E047 : Short_Integer; pragma Import (Ada, E047, "system__soft_links_E");
+   E045 : Short_Integer; pragma Import (Ada, E045, "system__exception_table_E");
+   E006 : Short_Integer; pragma Import (Ada, E006, "ada__real_time_E");
+   E130 : Short_Integer; pragma Import (Ada, E130, "system__tasking__restricted__stages_E");
+   E128 : Short_Integer; pragma Import (Ada, E128, "tasking_E");
 
-   Sec_Default_Sized_Stacks : array (1 .. 3) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
+   Sec_Default_Sized_Stacks : array (1 .. 2) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
    Local_Priority_Specific_Dispatching : constant String := "";
    Local_Interrupt_States : constant String := "";
@@ -104,32 +104,32 @@ package body ada_main is
 
       ada_main'Elab_Body;
       Default_Secondary_Stack_Size := System.Parameters.Runtime_Default_Sec_Stack_Size;
-      Binder_Sec_Stacks_Count := 3;
+      Binder_Sec_Stacks_Count := 2;
       Default_Sized_SS_Pool := Sec_Default_Sized_Stacks'Address;
 
       Runtime_Initialize (1);
 
       Ada.Text_Io'Elab_Body;
-      E006 := E006 + 1;
+      E126 := E126 + 1;
       Ada.Strings.Text_Buffers'Elab_Spec;
-      E100 := E100 + 1;
+      E096 := E096 + 1;
       System.Bb.Timing_Events'Elab_Spec;
-      E098 := E098 + 1;
+      E094 := E094 + 1;
       Ada.Exceptions'Elab_Spec;
       System.Soft_Links'Elab_Spec;
       Ada.Tags'Elab_Body;
-      E109 := E109 + 1;
+      E105 := E105 + 1;
       System.Exception_Table'Elab_Body;
-      E049 := E049 + 1;
-      E051 := E051 + 1;
-      E029 := E029 + 1;
+      E045 := E045 + 1;
+      E047 := E047 + 1;
+      E022 := E022 + 1;
       Ada.Real_Time'Elab_Body;
-      E016 := E016 + 1;
+      E006 := E006 + 1;
       System.Tasking.Restricted.Stages'Elab_Body;
-      E132 := E132 + 1;
+      E130 := E130 + 1;
       tasking'elab_spec;
       tasking'elab_body;
-      E130 := E130 + 1;
+      E128 := E128 + 1;
    end adainit;
 
    procedure Ada_Main_Program;

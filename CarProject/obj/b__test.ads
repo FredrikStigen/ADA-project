@@ -153,8 +153,6 @@ package ada_main is
    --  ada.real_time%b
    --  ada.real_time.delays%s
    --  ada.real_time.delays%b
-   --  system.relative_delays%s
-   --  system.relative_delays%b
    --  system.tasking.restricted%s
    --  system.tasking.restricted.stages%s
    --  system.tasking.restricted.stages%b

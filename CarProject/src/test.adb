@@ -1,8 +1,10 @@
 with ada.Text_IO; use ada.Text_IO;
-with tasking;
-
+with ada.Real_Time; use ada.Real_Time;
+with tasking; use tasking;
 procedure test is
 begin
-   put_line("in main");
-   delay 1.0;
+   loop
+      put_line("In main");
+      Start
+   end loop;
 end test;

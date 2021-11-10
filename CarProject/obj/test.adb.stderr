@@ -1,0 +1,5 @@
+test.adb:8:08: error: construct not allowed in configurable run-time mode
+test.adb:8:08: error: file s-tasren.ads not found
+test.adb:8:08: error: entity "System.Tasking.Rendezvous.Call_Simple" not available
+tasking.ads:3:07: error: violation of implicit restriction "max_task_entries = 0"
+tasking.ads:3:07: error: from profile "jorvik"

@@ -23,7 +23,7 @@ RV NO_IMPLICIT_LOOPS
 RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 
-U ada_main%b		b__test.adb		b7c38cb6 OO PK IL
+U ada_main%b		b__test.adb		df6ab0cc OO PK IL
 Z system%s		system.ads		system.ali
 
 U ada_main%s		b__test.ads		83915329 EE NE OO PK IL
@@ -31,8 +31,8 @@ W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
-D b__test.ads		20211108134438 f6f76486 ada_main%s
-D b__test.adb		20211108134438 4134e830 ada_main%b
+D b__test.ads		20211110142714 f6f76486 ada_main%s
+D b__test.adb		20211110142714 299dd44a ada_main%b
 D system.ads		20210927104348 ad54c63c system%s
 D s-parame.ads		20210927104346 8e90778f system.parameters%s
 D s-secsta.ads		20210927104346 56a2861c system.secondary_stack%s
@@ -44,7 +44,7 @@ G c Z s b [main ada_main 25 14 none]
 G c Z b b [Tsec_default_sized_stacksBIP ada_main 20 4 none]
 G c Z b b [ada_main_program ada_main 135 14 none]
 X 1 b__test.ads
-6K9*ada_main 166l5 166e13 2|7b14 169l5 169t13
+6K9*ada_main 164l5 164e13 2|7b14 169l5 169t13
 9a4*GNAT_Version{string} 11r22 13r54
 13m4*GNAT_Version_Address{3|80M9} 14r22
 16a4*Ada_Main_Program_Name{string} 17r22 2|146r52
@@ -52,16 +52,16 @@ X 1 b__test.ads
 22U14*adafinal 23i<c,adafinal>22 2|27b14 41l8 41t16 153s7
 25U14*main 26i<c,main>22 2|138b14 155t7
 X 2 b__test.adb
-9i4 E006{short_integer} 9m46 9r46 113m7 113r15
-10i4 E109{short_integer} 10m46 10r46 121m7 121r15
-11i4 E100{short_integer} 11m46 11r46 115m7 115r15
-12i4 E098{short_integer} 12m46 12r46 117m7 117r15
-13i4 E029{short_integer} 13m46 13r46 125m7 125r15
-14i4 E051{short_integer} 14m46 14r46 124m7 124r15
-15i4 E049{short_integer} 15m46 15r46 123m7 123r15
-16i4 E016{short_integer} 16m46 16r46 127m7 127r15
-17i4 E132{short_integer} 17m46 17r46 129m7 129r15
-18i4 E130{short_integer} 18m46 18r46 132m7 132r15
+9i4 E126{short_integer} 9m46 9r46 113m7 113r15
+10i4 E105{short_integer} 10m46 10r46 121m7 121r15
+11i4 E096{short_integer} 11m46 11r46 115m7 115r15
+12i4 E094{short_integer} 12m46 12r46 117m7 117r15
+13i4 E022{short_integer} 13m46 13r46 125m7 125r15
+14i4 E047{short_integer} 14m46 14r46 124m7 124r15
+15i4 E045{short_integer} 15m46 15r46 123m7 123r15
+16i4 E006{short_integer} 16m46 16r46 127m7 127r15
+17i4 E130{short_integer} 17m46 17r46 129m7 129r15
+18i4 E128{short_integer} 18m46 18r46 132m7 132r15
 20a4 Sec_Default_Sized_Stacks(5|43R9) 108m32 108r32
 22a4 Local_Priority_Specific_Dispatching{string} 96r9
 23a4 Local_Interrupt_States{string} 99r27

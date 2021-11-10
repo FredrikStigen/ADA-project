@@ -1,7 +1,17 @@
+with "..\..\..\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr";
+
 project Default is
 
    package Compiler is
-      for Switches ("Ada") use ("-g", "-O2");
+      for Switches ("ada") use ("-g", "-O2");
    end Compiler;
 
+   for Target use "arm-eabi";
+   for Runtime ("ada") use "ravenscar-full-nrf52833";
+
+   package Ide is
+      for Connection_Tool use "pyocd";
+   end Ide;
+
 end Default;
+
