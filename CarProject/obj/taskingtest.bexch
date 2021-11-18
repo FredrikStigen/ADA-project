@@ -1,0 +1,31 @@
+[MAPPING FILE]
+C:\Users\Stigen\AppData\Local\Temp\GNAT-TEMP-000002.TMP
+[TOOLCHAIN VERSION]
+ada
+GNAT 2021
+[MAIN BASE NAME]
+taskingtest
+[COMPILER PATH]
+c:\gnat\2021-arm-elf\bin\arm-eabi-gcc.exe
+[COMPILER LEADING SWITCHES]
+-c
+-x
+ada
+-gnatA
+--RTS=C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\
+-mlittle-endian
+-mthumb
+-mfloat-abi=hard
+-mfpu=fpv4-sp-d16
+-mcpu=cortex-m4
+[MAIN DEPENDENCY FILE]
+C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\obj\taskingtest.ali
+[DEPENDENCY FILES]
+[BINDING OPTIONS]
+gnatbind_prefix=arm-eabi-
+--RTS=C:\gnat\2021-arm-elf\arm-eabi\lib\gnat\ravenscar-full-nrf52833\
+[PROJECT FILES]
+C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\carproject.gpr
+20211117181152 f187d6013ddc342d38dec65b2bb0727d
+C:\Users\Stigen\Documents\GitHub\Ada_Drivers_Library\boards\MicroBit_v2\microbit_v2_full.gpr
+20210927093454 ada6769a1e96a64ef441688fc8fff447

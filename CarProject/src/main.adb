@@ -1,11 +1,12 @@
 with ada.Text_IO; use ada.Text_IO;
+with ada.Real_Time; use ada.Real_Time;
 with MicroBit.IOsForTasking;
-procedure Main is
+with tasking;
+
+procedure Main with Priority => 0 is
 
 begin
    loop
-      test := MicroBit.IOsForTasking.Analog(4);
-      put_line(integer'image(Integer(test)));
-      delay 1.0;
+      null;
    end loop;
 end Main;

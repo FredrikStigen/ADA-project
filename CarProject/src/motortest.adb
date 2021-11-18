@@ -1,71 +1,24 @@
 with MicroBit.IOsForTasking;
+with MicroBit.IOsForTaskingTimer1;
 with ada.Text_IO; use ada.Text_IO;
 with Ada.Real_Time; use Ada.Real_Time;
-
 procedure motortest is   
-   function Forward(var : in out Integer) return integer is
-   begin
-      while var < 200 loop
-         MicroBit.IOsForTasking.Set(0, True);
-         MicroBit.IOsForTasking.Set(1, False);
-         MicroBit.IOsForTasking.Set(2, False);
-         MicroBit.IOsForTasking.Set(3, False);
-         delay until Clock + Milliseconds (2);
-         MicroBit.IOsForTasking.Set(0, False);
-         MicroBit.IOsForTasking.Set(1, True);
-         MicroBit.IOsForTasking.Set(2, False);
-         MicroBit.IOsForTasking.Set(3, False);
-         delay until Clock + Milliseconds (2);
-         MicroBit.IOsForTasking.Set(0, False);
-         MicroBit.IOsForTasking.Set(1, False);
-         MicroBit.IOsForTasking.Set(2, True);
-         MicroBit.IOsForTasking.Set(3, False);
-         delay until Clock + Milliseconds (2);
-         MicroBit.IOsForTasking.Set(0, False);
-         MicroBit.IOsForTasking.Set(1, False);
-         MicroBit.IOsForTasking.Set(2, False);
-         MicroBit.IOsForTasking.Set(3, True);
-         delay until Clock + Milliseconds (2);
-         var := var + 1;
-   end loop;
-   return var;
-end Forward;
-
-   function Backward(var : in out Integer) return integer is
-   begin
-      while var > 0 loop
-         MicroBit.IOsForTasking.Set(0, False);
-         MicroBit.IOsForTasking.Set(1, False);
-         MicroBit.IOsForTasking.Set(2, False);
-         MicroBit.IOsForTasking.Set(3, True);
-         delay until Clock + Milliseconds (2);
-         MicroBit.IOsForTasking.Set(0, False);
-         MicroBit.IOsForTasking.Set(1, False);
-         MicroBit.IOsForTasking.Set(2, True);
-         MicroBit.IOsForTasking.Set(3, False);
-         delay until Clock + Milliseconds (2);
-         MicroBit.IOsForTasking.Set(0, False);
-         MicroBit.IOsForTasking.Set(1, True);
-         MicroBit.IOsForTasking.Set(2, False);
-         MicroBit.IOsForTasking.Set(3, False);
-         delay until Clock + Milliseconds (2);
-         MicroBit.IOsForTasking.Set(0, True);
-         MicroBit.IOsForTasking.Set(1, False);
-         MicroBit.IOsForTasking.Set(2, False);
-         MicroBit.IOsForTasking.Set(3, False);
-         delay until Clock + Milliseconds (2);
-         var := var - 1;
-      end loop;
-      return var;
-   end Backward;
-
-   x : integer := 0;
+   Time_Now : ada.Real_Time.Time;
+   pwmDelay : Integer := 2;
+   
 begin
+   MicroBit.IOsForTasking.Set_Analog_Period_Us(2000);
+   MicroBit.IOsForTaskingTimer1.Set_Analog_Period_Us(2000);
    loop
-      if x <= 0 then
-         x := Forward(x);
-      elsif x >= 200 then
-         x := Backward(x);
-      end if;
+     Time_Now := Clock;
+      MicroBit.IOsForTasking.Write(0,0);
+      MicroBit.IOsForTasking.Write(1,0);
+      MicroBit.IOsForTasking.Write(2,0);
+      MicroBit.IOsForTaskingTimer1.Write(3,512);
+    delay until Time_Now + Milliseconds (pwmDelay);
+    
+      
+   -- delay until Time_Now + 4* Milliseconds (pwmDelay);
+ 
    end loop;
 end motortest;

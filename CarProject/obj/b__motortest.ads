@@ -251,6 +251,8 @@ package ada_main is
    --  microbit%s
    --  microbit.iosfortasking%s
    --  microbit.iosfortasking%b
+   --  microbit.iosfortaskingtimer1%s
+   --  microbit.iosfortaskingtimer1%b
    --  motortest%b
    --  END ELABORATION ORDER
 

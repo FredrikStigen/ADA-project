@@ -1,10 +1,11 @@
 with ada.Text_IO; use ada.Text_IO;
 with ada.Real_Time; use ada.Real_Time;
-with tasking; use tasking;
-procedure test is
+with MicroBit.IOsForTasking;
+with taskingtest;
+
+procedure test with Priority => 0 is
 begin
    loop
-      put_line("In main");
-      Start
+      delay until clock + Milliseconds(500);
    end loop;
 end test;

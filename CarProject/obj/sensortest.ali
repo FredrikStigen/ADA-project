@@ -19,7 +19,7 @@ RV NO_RELATIVE_DELAY
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U sensortest%b		sensortest.adb		ad643e7e NE OO SU
+U sensortest%b		sensortest.adb		bc3acb29 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
@@ -62,7 +62,7 @@ D nrf_svd-spi.ads	20210927093454 6e2ffb69 nrf_svd.spi%s
 D nrf_svd-timer.ads	20210927093454 ba50db1c nrf_svd.timer%s
 D nrf_svd-twi.ads	20210927093454 68301534 nrf_svd.twi%s
 D nrf_svd-uart.ads	20210927093454 83bcebc8 nrf_svd.uart%s
-D sensortest.adb	20211105115130 324cec9f sensortest%b
+D sensortest.adb	20211118212350 231219c8 sensortest%b
 D system.ads		20210927104348 ad54c63c system%s
 D s-bb.ads		20210927104346 09e072ae system.bb%s
 D s-bbbopa.ads		20210927104348 f68efaf0 system.bb.board_parameters%s
@@ -105,7 +105,7 @@ X 1 ada.ads
 16K9*Ada 20e8 36|2r6 2r23
 X 12 a-textio.ads
 36K13*Text_IO 52e16 36|2w10 2r27
-46U14*Put_Line 36|13s7 14s7 15s7
+46U14*Put_Line 36|14s7 15s7 16s7
 X 15 hal-gpio.ads
 47h9*GPIO_Point
 X 16 hal-i2c.ads
@@ -115,15 +115,15 @@ X 17 hal-spi.ads
 X 18 hal-uart.ads
 48h9*UART_Port
 X 20 microbit.ads
-58K9*MicroBit 112e13 36|1r6 1r34
+58K9*MicroBit 112e13 36|1r6 10r12 11r12 12r12
 X 21 microbit-iosfortasking.ads
-5K18*IOsForTasking 91e27 36|1w15 1r43
-25V13*Set{boolean} 36|10s12 11s12 12s12
+5K18*IOsForTasking 91e27 36|1w15 10r21 11r21 12r21
+25V13*Set{boolean} 36|10s35 11s35 12s35
 X 36 sensortest.adb
-4U11*SensorTest 4b11 18l5 18t15
-5b4 L{boolean} 10m7 13r48
-6b4 C{boolean} 11m7 14r50
-7b4 R{boolean} 12m7 15r49
+4U11*SensorTest 4b11 19l5 19t15
+5b4 L{boolean} 10m7 14r39
+6b4 C{boolean} 11m7 15r39
+7b4 R{boolean} 12m7 16r39
 X 50 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
 X 59 s-secsta.ads

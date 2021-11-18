@@ -42,6 +42,7 @@ package body ada_main is
    E183 : Short_Integer; pragma Import (Ada, E183, "nrf__uart_E");
    E130 : Short_Integer; pragma Import (Ada, E130, "nrf__device_E");
    E187 : Short_Integer; pragma Import (Ada, E187, "microbit__iosfortasking_E");
+   E228 : Short_Integer; pragma Import (Ada, E228, "microbit__iosfortaskingtimer1_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -206,6 +207,9 @@ package body ada_main is
       Microbit.Iosfortasking'Elab_Spec;
       Microbit.Iosfortasking'Elab_Body;
       E187 := E187 + 1;
+      Microbit.Iosfortaskingtimer1'Elab_Spec;
+      Microbit.Iosfortaskingtimer1'Elab_Body;
+      E228 := E228 + 1;
    end adainit;
 
    procedure Ada_Main_Program;

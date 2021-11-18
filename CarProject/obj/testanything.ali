@@ -16,7 +16,7 @@ RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U testanything%b	testanything.adb	d48bcf39 NE OO SU IL
+U testanything%b	testanything.adb	b5d8c025 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -95,7 +95,7 @@ D s-taskin.ads		20210927104348 989d56fd system.tasking%s
 D s-taprob.ads		20210927104348 c8fc0753 system.tasking.protected_objects%s
 D s-traent.ads		20210927104346 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210927104346 2b077493 system.unsigned_types%s
-D testanything.adb	20211108132128 844a39ff testanything%b
+D testanything.adb	20211116110048 e51936e3 testanything%b
 D unchconv.ads		20210927104346 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [testanything standard 5 11 none]
@@ -176,5 +176,5 @@ X 71 testanything.adb
 115b4 L{boolean} 124m7 128r13 130m10 135r40 137m10 142r41 144m10
 116b4 C{boolean} 125m7 128r26 131m10 135r26 138m10 142r27 145m10
 117b4 R{boolean} 126m7 128r40 132m10 135r13 139m10 142r13 146m10
-118i4 readPot{23|28I9} 122m7 123r40
+118i4 readPot{23|28I9} 122m7
 

@@ -15,7 +15,7 @@ RV NO_DELAY
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U motortest%b		motortest.adb		936df41e NE OO SU IL
+U motortest%b		motortest.adb		a6ccbb48 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -23,6 +23,7 @@ Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W microbit%s		microbit.ads		microbit.ali
 W microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.ali
+W microbit.iosfortaskingtimer1%s  microbit-iosfortaskingtimer1.adb  microbit-iosfortaskingtimer1.ali
 
 D ada.ads		20210927104346 76789da1 ada%s
 D a-except.ads		20210927104346 946f3014 ada.exceptions%s
@@ -47,7 +48,8 @@ D hal-uart.ads		20210927093456 d58316b4 hal.uart%s
 D interfac.ads		20210927104346 edec285f interfaces%s
 D microbit.ads		20211101115002 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20211101115002 60e097d3 microbit.iosfortasking%s
-D motortest.adb		20211105121208 c3ac02d8 motortest%b
+D microbit-iosfortaskingtimer1.ads  20211117153940 0cbf2606 microbit.iosfortaskingtimer1%s
+D motortest.adb		20211117160548 fab26b88 motortest%b
 D nrf.ads		20210927093454 74cf72f5 nrf%s
 D nrf-device.ads	20210927093454 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20210927093454 ab6d4598 nrf.gpio%s
@@ -98,19 +100,21 @@ D s-unstyp.ads		20210927104346 2b077493 system.unsigned_types%s
 D unchconv.ads		20210927104346 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [motortest standard 5 11 none]
-G r c none [motortest standard 5 11 none] [set microbit__iosfortasking 22 14 none]
+G r c none [motortest standard 5 11 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
+G r c none [motortest standard 5 11 none] [set_analog_period_us microbit__iosfortaskingtimer1 30 14 none]
+G r c none [motortest standard 5 11 none] [write microbit__iosfortasking 34 14 none]
+G r c none [motortest standard 5 11 none] [write microbit__iosfortaskingtimer1 34 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 24|2r6 2r23 3r6 3r25
+16K9*Ada 20e8 25|3r6 3r23 4r6 4r25 6r15
 X 6 a-reatim.ads
-40K13*Real_Time 181e18 24|3w10 3r29
-50M9*Time<49|46M9>
-60I9*Time_Span<49|81I9>
-67V13*Clock{50M9}<49|134p13> 24|13s22 18s22 23s22 28s22 41s22 46s22 51s22
-. 56s22
-71V14*"+"{50M9} 24|13s28 18s28 23s28 28s28 41s28 46s28 51s28 56s28
-127V13*Milliseconds{60I9} 24|13s30 18s30 23s30 28s30 41s30 46s30 51s30 56s30
+40K13*Real_Time 181e18 25|4w10 4r29 6r19
+50M9*Time<50|46M9> 25|6r29
+60I9*Time_Span<50|81I9>
+67V13*Clock{50M9}<50|134p13> 25|13s18
+71V14*"+"{50M9} 25|18s26
+127V13*Milliseconds{60I9} 25|18s28
 X 14 a-textio.ads
-36K13*Text_IO 52e16 24|2w10 2r27
+36K13*Text_IO 52e16 25|3w10 3r27
 X 17 hal-gpio.ads
 47h9*GPIO_Point
 X 18 hal-i2c.ads
@@ -120,31 +124,26 @@ X 19 hal-spi.ads
 X 20 hal-uart.ads
 48h9*UART_Port
 X 22 microbit.ads
-58K9*MicroBit 112e13 24|1r6 9r10 10r10 11r10 12r10 14r10 15r10 16r10 17r10
-. 19r10 20r10 21r10 22r10 24r10 25r10 26r10 27r10 37r10 38r10 39r10 40r10
-. 42r10 43r10 44r10 45r10 47r10 48r10 49r10 50r10 52r10 53r10 54r10 55r10
+58K9*MicroBit 112e13 25|1r6 2r6 10r4 11r4 14r7 15r7 16r7 17r7
 X 23 microbit-iosfortasking.ads
-5K18*IOsForTasking 91e27 24|1w15 9r19 10r19 11r19 12r19 14r19 15r19 16r19
-. 17r19 19r19 20r19 21r19 22r19 24r19 25r19 26r19 27r19 37r19 38r19 39r19
-. 40r19 42r19 43r19 44r19 45r19 47r19 48r19 49r19 50r19 52r19 53r19 54r19
-. 55r19
-22U14*Set 24|9s33 10s33 11s33 12s33 14s33 15s33 16s33 17s33 19s33 20s33 21s33
-. 22s33 24s33 25s33 26s33 27s33 37s33 38s33 39s33 40s33 42s33 43s33 44s33
-. 45s33 47s33 48s33 49s33 50s33 52s33 53s33 54s33 55s33
-X 24 motortest.adb
-5U11*motortest 5b11 71l5 71t14
-6V13 Forward{integer} 6b13 6=21 32l5 32t12 66s15
-6i21 var{integer} 8r13 29m10 29r17 31r11
-34V13 Backward{integer} 34b13 34=22 60l8 60t16 68s15
-34i22 var{integer} 36r13 57m10 57r17 59r14
-62i4 x{integer} 65r10 66m10 66m23 66r23 67r13 68m10 68m24 68r24
-X 49 s-bbtime.ads
+5K18*IOsForTasking 91e27 25|1w15 10r13 14r16 15r16 16r16
+30U14*Set_Analog_Period_Us 25|10s27
+34U14*Write 25|14s30 15s30 16s30
+X 24 microbit-iosfortaskingtimer1.ads
+5K18*IOsForTaskingTimer1 91e33 25|2w15 11r13 17r16
+30U14*Set_Analog_Period_Us 25|11s33
+34U14*Write 25|17s36
+X 25 motortest.adb
+5U11*motortest 5b11 24l5 24t14
+6m4 Time_Now{6|50M9} 13m6 18r17
+7i4 pwmDelay{integer} 18r42
+X 50 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
-X 52 s-interr.ads
+X 53 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
-X 60 s-secsta.ads
+X 61 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
-X 68 s-taskin.ads
-398V13*Get_Sec_Stack{60|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 69 s-taskin.ads
+398V13*Get_Sec_Stack{61|46P9} 399i<c,__gnat_get_secondary_stack>22
 

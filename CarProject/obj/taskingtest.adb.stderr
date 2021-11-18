@@ -1,4 +1,0 @@
-taskingtest.adb:5:04: error: violation of restriction "no_task_hierarchy"
-taskingtest.adb:5:04: error: from profile "jorvik" at system.ads:42
-taskingtest.adb:6:04: error: violation of restriction "no_task_hierarchy"
-taskingtest.adb:6:04: error: from profile "jorvik" at system.ads:42

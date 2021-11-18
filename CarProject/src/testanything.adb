@@ -1,6 +1,7 @@
 with MicroBit.IOsForTasking;
 with ada.Text_IO; use ada.Text_IO;
 with Ada.Real_Time; use Ada.Real_Time;
+with GNAT.Semaphores;
 
 procedure testanything is
    function RightTurn(var : in out Integer) return integer is
@@ -120,7 +121,7 @@ end RightTurn;
 begin
    loop
       readPot := MicroBit.IOsForTasking.Analog(4);
-      MicroBit.IOsForTasking.Write(10, readPot);
+      MicroBit.IOsForTasking.Write(10, 750);
       L := MicroBit.IOsForTasking.Set(5);
       C := MicroBit.IOsForTasking.Set(6);
       R := MicroBit.IOsForTasking.Set(7);
