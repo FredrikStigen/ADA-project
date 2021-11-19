@@ -11,15 +11,13 @@ A -march=armv7e-m+fp
 P DB LC TF  SS ZX
 
 RN
-RV NO_DELAY
 RV NO_IO
 RV STATIC_PRIORITIES
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test%b		test.adb		45c5e1f2 NE OO SU IL
+U test%b		test.adb		566087ae NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
-Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W microbit%s		microbit.ads		microbit.ali
@@ -34,7 +32,6 @@ D a-finali.ads		20210927104346 bf4f806b ada.finalization%s
 D a-interr.ads		20210927104348 bdf68b51 ada.interrupts%s
 D a-intnam.ads		20210927104348 28dc3d69 ada.interrupts.names%s
 D a-reatim.ads		20210927104348 cfe92427 ada.real_time%s
-D a-retide.ads		20210927104348 081cdaa4 ada.real_time.delays%s
 D a-stream.ads		20210927104346 119b8fb3 ada.streams%s
 D a-string.ads		20210927104346 90ac6797 ada.strings%s
 D a-sttebu.ads		20210927104346 18209c64 ada.strings.text_buffers%s
@@ -100,47 +97,39 @@ D s-tasres.ads		20210927104348 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20210927104348 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20210927104346 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210927104346 2b077493 system.unsigned_types%s
-D taskingtest.ads	20211118212130 106e877a taskingtest%s
-D test.adb		20211118212128 056a904e test%b
+D taskingtest.ads	20211119133554 6824bc70 taskingtest%s
+D test.adb		20211119142546 6e85cd18 test%b
 D unchconv.ads		20210927104346 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [test standard 6 11 none]
 X 1 ada.ads
-16K9*Ada 20e8 74|1r6 1r23 2r6 2r25
+16K9*Ada 20e8 73|1r6 1r23 2r6 2r25
 X 6 a-reatim.ads
-40K13*Real_Time 181e18 74|2w10 2r29
-50M9*Time<48|46M9>
-60I9*Time_Span<48|81I9>
-67V13*Clock{50M9}<48|134p13> 74|9s19
-71V14*"+"{50M9} 74|9s25
-127V13*Milliseconds{60I9} 74|9s27
-X 14 a-textio.ads
-36K13*Text_IO 52e16 74|1w10 1r27
-X 17 hal-gpio.ads
+40K13*Real_Time 181e18 73|2w10 2r29
+X 13 a-textio.ads
+36K13*Text_IO 52e16 73|1w10 1r27
+X 16 hal-gpio.ads
 47h9*GPIO_Point
-X 18 hal-i2c.ads
+X 17 hal-i2c.ads
 48h9*I2C_Port
-X 19 hal-spi.ads
+X 18 hal-spi.ads
 48h9*SPI_Port
-X 20 hal-uart.ads
+X 19 hal-uart.ads
 48h9*UART_Port
-X 22 microbit.ads
-58K9*MicroBit 112e13 74|3r6
-X 23 microbit-iosfortasking.ads
-5K18*IOsForTasking 91e27 74|3w15
-X 48 s-bbtime.ads
-46M9*Time
-81I9*Time_Span<long_long_integer>
-X 51 s-interr.ads
+X 21 microbit.ads
+58K9*MicroBit 112e13 73|3r6
+X 22 microbit-iosfortasking.ads
+5K18*IOsForTasking 91e27 73|3w15
+X 50 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
-X 59 s-secsta.ads
+X 58 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
-X 67 s-taskin.ads
-398V13*Get_Sec_Stack{59|46P9} 399i<c,__gnat_get_secondary_stack>22
-X 70 s-tarest.ads
+X 66 s-taskin.ads
+398V13*Get_Sec_Stack{58|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 69 s-tarest.ads
 232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
-X 73 taskingtest.ads
-1K9*taskingtest 4e16 74|4w6
-X 74 test.adb
+X 72 taskingtest.ads
+1K9*taskingtest 6e16 73|4w6
+X 73 test.adb
 6U11*test 6b11 11l5 11t9
 

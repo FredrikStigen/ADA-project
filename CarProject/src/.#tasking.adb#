@@ -2,14 +2,14 @@ with ada.Text_IO; use ada.Text_IO;
 with ada.Real_Time; use ada.Real_Time;
 with MicroBit.IOsForTasking;
 
-package body taskingtest is
+package body tasking is
    LeftSensor : Boolean;		--
    CenterSensor : Boolean;		-- Variables for each IR sensor
    RightSensor : Boolean;		--
-   
+
    x : integer := 0;				-- Tick counter for step motor position
-   
-   
+
+
    -- This task will run alot, making sure that the sensors are
    -- kept update as often as possible to be able to keep
    -- The car on the track
@@ -19,12 +19,12 @@ package body taskingtest is
          LeftSensor := MicroBit.IOsForTasking.Set(4);
          CenterSensor := MicroBit.IOsForTasking.Set(6);
          RightSensor := MicroBit.IOsForTasking.Set(7);
-         
+
          MicroBit.IOsForTasking.set(10, True); -- Starts the engine
          delay until clock + Milliseconds(200);
       end loop;
    end ReadSensor;
-   
+
    -- When the Left IR sensor activates (Sensor is on a light surface)
    -- the conditions in the task is met and the car will then turn
    -- to the right to get back on track
@@ -59,7 +59,7 @@ package body taskingtest is
          delay until clock + Milliseconds(450);
       end loop;
    end TurnRight;
-   
+
    -- When the Right IR sensors activates (Sensor is on a light surface)
    -- the conditions in the task is met and the car will then turn
    -- to the left to get back on track
@@ -94,10 +94,10 @@ package body taskingtest is
          delay until clock + Milliseconds(450);
       end loop;
    end TurnLEft;
-   
+
    -- When the car is currently turning either to the left or to the right
    -- and the cars sensors are all on top of a dark surface
-   -- the wheel will go back to its default position to be able 
+   -- the wheel will go back to its default position to be able
    -- to drive forward
    task body DirectCorrection is	-- Returns the step motor to its
    begin								-- default position when it is back on track
@@ -154,4 +154,4 @@ package body taskingtest is
          delay until clock + Milliseconds(450);
       end loop;
    end DirectCorrection;
-end taskingtest;
+end tasking;

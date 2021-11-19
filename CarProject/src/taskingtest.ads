@@ -1,4 +1,6 @@
 package taskingtest is
    task ReadSensor with Priority => 2;
-   task test with Priority => 1;
+   task TurnRight with Priority => 1;
+   task TurnLeft with Priority => 1;
+   task DirectCorrection with Priority => 1;
 end taskingtest;

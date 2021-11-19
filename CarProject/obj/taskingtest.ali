@@ -11,7 +11,7 @@ P DB LC TF  SS ZX
 
 RN
 RV NO_DELAY
-RV NO_ENUMERATION_MAPS
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_IO
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_TASKING
@@ -19,9 +19,9 @@ RV STATIC_PRIORITIES
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
-RV MAX_TASKS=2
+RV MAX_TASKS=4
 
-U taskingtest%b		taskingtest.adb		e3cfb7a4 OO PK IL
+U taskingtest%b		taskingtest.adb		3223bc4e OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -31,7 +31,7 @@ W microbit%s		microbit.ads		microbit.ali
 W microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.ali  AD
 Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
 
-U taskingtest%s		taskingtest.ads		106e877a EE OO PK IL
+U taskingtest%s		taskingtest.ads		6824bc70 EE OO PK IL
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 Z system%s		system.ads		system.ali
 Z system.parameters%s	s-parame.adb		s-parame.ali
@@ -39,7 +39,7 @@ Z system.storage_elements%s  s-stoele.adb	s-stoele.ali
 Z system.task_info%s	s-tasinf.adb		s-tasinf.ali
 Z system.tasking%s	s-taskin.adb		s-taskin.ali
 Z system.tasking.restricted.stages%s  s-tarest.adb  s-tarest.ali
-T 2 2
+T 4 4
 
 D ada.ads		20210927104346 76789da1 ada%s
 D a-except.ads		20210927104346 946f3014 ada.exceptions%s
@@ -113,29 +113,42 @@ D s-tasres.ads		20210927104348 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20210927104348 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20210927104346 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210927104346 2b077493 system.unsigned_types%s
-D taskingtest.ads	20211118212130 106e877a taskingtest%s
-D taskingtest.adb	20211118214352 a360c618 taskingtest%b
+D taskingtest.ads	20211119133554 6824bc70 taskingtest%s
+D taskingtest.adb	20211119142546 0ac6f6f8 taskingtest%b
 D unchconv.ads		20210927104346 ca2f9e18 unchecked_conversion%s
 G a e
 G c b b b [b taskingtest 5 1 none]
 G c Z s b [readsensorTK taskingtest 2 9 none]
 G c Z s s [readsensorTKVIP taskingtest 2 4 none]
-G c Z s b [testTK taskingtest 3 9 none]
-G c Z s s [testTKVIP taskingtest 3 4 none]
+G c Z s b [turnrightTK taskingtest 3 9 none]
+G c Z s s [turnrightTKVIP taskingtest 3 4 none]
+G c Z s b [turnleftTK taskingtest 4 9 none]
+G c Z s s [turnleftTKVIP taskingtest 4 4 none]
+G c Z s b [directcorrectionTK taskingtest 5 9 none]
+G c Z s s [directcorrectionTKVIP taskingtest 5 4 none]
 G r c none [b taskingtest 5 1 none] [set microbit__iosfortasking 25 13 none]
+G r c none [b taskingtest 5 1 none] [set microbit__iosfortasking 22 14 none]
 G r c none [readsensorTK taskingtest 2 9 none] [set microbit__iosfortasking 25 13 none]
+G r c none [readsensorTK taskingtest 2 9 none] [set microbit__iosfortasking 22 14 none]
+G r c none [turnrightTK taskingtest 3 9 none] [set microbit__iosfortasking 22 14 none]
+G r c none [turnleftTK taskingtest 4 9 none] [set microbit__iosfortasking 22 14 none]
+G r c none [directcorrectionTK taskingtest 5 9 none] [set microbit__iosfortasking 22 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 74|1r6 1r23 2r6 2r25
 X 6 a-reatim.ads
 40K13*Real_Time 181e18 74|2w10 2r29
 50M9*Time<48|46M9>
 60I9*Time_Span<48|81I9>
-67V13*Clock{50M9}<48|134p13> 74|16s22 27s22
-71V14*"+"{50M9} 74|16s28 27s28
-127V13*Milliseconds{60I9} 74|16s30 27s30
+67V13*Clock{50M9}<48|134p13> 74|24s22 40s28 45s28 50s28 55s28 59s22 75s28
+. 80s28 85s28 90s28 94s22 112s28 117s28 122s28 127s28 135s28 140s28 145s28
+. 150s28 154s22
+71V14*"+"{50M9} 74|24s28 40s34 45s34 50s34 55s34 59s28 75s34 80s34 85s34
+. 90s34 94s28 112s34 117s34 122s34 127s34 135s34 140s34 145s34 150s34 154s28
+125V13*Microseconds{60I9} 74|40s36 45s36 50s36 55s36 75s36 80s36 85s36 90s36
+. 112s36 117s36 122s36 127s36 135s36 140s36 145s36 150s36
+127V13*Milliseconds{60I9} 74|24s30 59s30 94s30 154s30
 X 14 a-textio.ads
 36K13*Text_IO 52e16 74|1w10 1r27
-46U14*Put_Line 74|24s10 25s10 26s10
 X 17 hal-gpio.ads
 47h9*GPIO_Point
 X 18 hal-i2c.ads
@@ -145,10 +158,28 @@ X 19 hal-spi.ads
 X 20 hal-uart.ads
 48h9*UART_Port
 X 22 microbit.ads
-58K9*MicroBit 112e13 74|3r6 13r24 14r26 15r25
+58K9*MicroBit 112e13 74|3r6 19r24 20r26 21r25 23r10 36r16 37r16 38r16 39r16
+. 41r16 42r16 43r16 44r16 46r16 47r16 48r16 49r16 51r16 52r16 53r16 54r16
+. 71r16 72r16 73r16 74r16 76r16 77r16 78r16 79r16 81r16 82r16 83r16 84r16
+. 86r16 87r16 88r16 89r16 108r16 109r16 110r16 111r16 113r16 114r16 115r16
+. 116r16 118r16 119r16 120r16 121r16 123r16 124r16 125r16 126r16 131r16 132r16
+. 133r16 134r16 136r16 137r16 138r16 139r16 141r16 142r16 143r16 144r16 146r16
+. 147r16 148r16 149r16
 X 23 microbit-iosfortasking.ads
-5K18*IOsForTasking 91e27 74|3w15 13r33 14r35 15r34
-25V13*Set{boolean} 74|13s47 14s49 15s48
+5K18*IOsForTasking 91e27 74|3w15 19r33 20r35 21r34 23r19 36r25 37r25 38r25
+. 39r25 41r25 42r25 43r25 44r25 46r25 47r25 48r25 49r25 51r25 52r25 53r25
+. 54r25 71r25 72r25 73r25 74r25 76r25 77r25 78r25 79r25 81r25 82r25 83r25
+. 84r25 86r25 87r25 88r25 89r25 108r25 109r25 110r25 111r25 113r25 114r25
+. 115r25 116r25 118r25 119r25 120r25 121r25 123r25 124r25 125r25 126r25 131r25
+. 132r25 133r25 134r25 136r25 137r25 138r25 139r25 141r25 142r25 143r25 144r25
+. 146r25 147r25 148r25 149r25
+22U14*Set 74|23s33 36s39 37s39 38s39 39s39 41s39 42s39 43s39 44s39 46s39
+. 47s39 48s39 49s39 51s39 52s39 53s39 54s39 71s39 72s39 73s39 74s39 76s39
+. 77s39 78s39 79s39 81s39 82s39 83s39 84s39 86s39 87s39 88s39 89s39 108s39
+. 109s39 110s39 111s39 113s39 114s39 115s39 116s39 118s39 119s39 120s39 121s39
+. 123s39 124s39 125s39 126s39 131s39 132s39 133s39 134s39 136s39 137s39 138s39
+. 139s39 141s39 142s39 143s39 144s39 146s39 147s39 148s39 149s39
+25V13*Set{boolean} 74|19s47 20s49 21s48
 X 48 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
@@ -161,11 +192,15 @@ X 67 s-taskin.ads
 X 70 s-tarest.ads
 232U14*Activate_All_Tasks_Sequential 233i<c,__gnat_activate_all_tasks>22
 X 73 taskingtest.ads
-1K9*taskingtest 4l5 4e16 74|5b14 30l5 30t16
-2t9*ReadSensor 74|10b14 19l8 19t18
-3t9*test 74|21b14 29l8 29t12
+1K9*taskingtest 6l5 6e16 74|5b14 157l5 157t16
+2t9*ReadSensor 74|16b14 26l8 26t18
+3t9*TurnRight 74|31b14 61l8 61t17
+4t9*TurnLeft 74|66b14 96l8 96t16
+5t9*DirectCorrection 74|102b14 156l8 156t24
 X 74 taskingtest.adb
-6b4 LeftSensor{boolean} 13m10 24r33
-7b4 CenterSensor{boolean} 14m10 25r33
-8b4 RightSensor{boolean} 15m10 26r33
+6b4 LeftSensor{boolean} 19m10 34r13 69r13 105r13
+7b4 CenterSensor{boolean} 20m10 34r35 69r36 105r36
+8b4 RightSensor{boolean} 21m10 34r60 69r61 106r16
+10i4 x{integer} 35r19 56m16 56r21 70r19 91m16 91r21 107r19 107r29 128m16
+. 128r21 130r19 130r29 151m16 151r21
 

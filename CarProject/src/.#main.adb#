@@ -6,7 +6,6 @@ with tasking;
 procedure main with Priority => 0 is
 begin
    loop
-      --null;
-      MicroBit.IOsForTasking.set(10, True);
+      null;
    end loop;
 end main;

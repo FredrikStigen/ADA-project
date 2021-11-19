@@ -6,6 +6,6 @@ with taskingtest;
 procedure test with Priority => 0 is
 begin
    loop
-      delay until clock + Milliseconds(500);
+      null;
    end loop;
 end test;

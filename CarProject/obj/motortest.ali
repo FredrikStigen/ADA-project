@@ -15,7 +15,7 @@ RV NO_DELAY
 RV NO_IO
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U motortest%b		motortest.adb		a6ccbb48 NE OO SU IL
+U motortest%b		motortest.adb		4448ee53 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -23,7 +23,6 @@ Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W microbit%s		microbit.ads		microbit.ali
 W microbit.iosfortasking%s  microbit-iosfortasking.adb  microbit-iosfortasking.ali
-W microbit.iosfortaskingtimer1%s  microbit-iosfortaskingtimer1.adb  microbit-iosfortaskingtimer1.ali
 
 D ada.ads		20210927104346 76789da1 ada%s
 D a-except.ads		20210927104346 946f3014 ada.exceptions%s
@@ -48,8 +47,7 @@ D hal-uart.ads		20210927093456 d58316b4 hal.uart%s
 D interfac.ads		20210927104346 edec285f interfaces%s
 D microbit.ads		20211101115002 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20211101115002 60e097d3 microbit.iosfortasking%s
-D microbit-iosfortaskingtimer1.ads  20211117153940 0cbf2606 microbit.iosfortaskingtimer1%s
-D motortest.adb		20211117160548 fab26b88 motortest%b
+D motortest.adb		20211119112504 14891895 motortest%b
 D nrf.ads		20210927093454 74cf72f5 nrf%s
 D nrf-device.ads	20210927093454 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20210927093454 ab6d4598 nrf.gpio%s
@@ -99,22 +97,19 @@ D s-traent.ads		20210927104346 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210927104346 2b077493 system.unsigned_types%s
 D unchconv.ads		20210927104346 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [motortest standard 5 11 none]
-G r c none [motortest standard 5 11 none] [set_analog_period_us microbit__iosfortasking 30 14 none]
-G r c none [motortest standard 5 11 none] [set_analog_period_us microbit__iosfortaskingtimer1 30 14 none]
-G r c none [motortest standard 5 11 none] [write microbit__iosfortasking 34 14 none]
-G r c none [motortest standard 5 11 none] [write microbit__iosfortaskingtimer1 34 14 none]
+G c Z b b [motortest standard 4 11 none]
+G r c none [motortest standard 4 11 none] [set microbit__iosfortasking 22 14 none]
 X 1 ada.ads
-16K9*Ada 20e8 25|3r6 3r23 4r6 4r25 6r15
+16K9*Ada 20e8 24|2r6 2r23 3r6 3r25
 X 6 a-reatim.ads
-40K13*Real_Time 181e18 25|4w10 4r29 6r19
-50M9*Time<50|46M9> 25|6r29
-60I9*Time_Span<50|81I9>
-67V13*Clock{50M9}<50|134p13> 25|13s18
-71V14*"+"{50M9} 25|18s26
-127V13*Milliseconds{60I9} 25|18s28
+40K13*Real_Time 181e18 24|3w10 3r29
+50M9*Time<49|46M9>
+60I9*Time_Span<49|81I9>
+67V13*Clock{50M9}<49|134p13> 24|14s19 19s19 24s19 29s19
+71V14*"+"{50M9} 24|14s25 19s25 24s25 29s25
+125V13*Microseconds{60I9} 24|14s27 19s27 24s27 29s27
 X 14 a-textio.ads
-36K13*Text_IO 52e16 25|3w10 3r27
+36K13*Text_IO 52e16 24|2w10 2r27
 X 17 hal-gpio.ads
 47h9*GPIO_Point
 X 18 hal-i2c.ads
@@ -124,26 +119,22 @@ X 19 hal-spi.ads
 X 20 hal-uart.ads
 48h9*UART_Port
 X 22 microbit.ads
-58K9*MicroBit 112e13 25|1r6 2r6 10r4 11r4 14r7 15r7 16r7 17r7
+58K9*MicroBit 112e13 24|1r6 10r7 11r7 12r7 13r7 15r7 16r7 17r7 18r7 20r7
+. 21r7 22r7 23r7 25r7 26r7 27r7 28r7
 X 23 microbit-iosfortasking.ads
-5K18*IOsForTasking 91e27 25|1w15 10r13 14r16 15r16 16r16
-30U14*Set_Analog_Period_Us 25|10s27
-34U14*Write 25|14s30 15s30 16s30
-X 24 microbit-iosfortaskingtimer1.ads
-5K18*IOsForTaskingTimer1 91e33 25|2w15 11r13 17r16
-30U14*Set_Analog_Period_Us 25|11s33
-34U14*Write 25|17s36
-X 25 motortest.adb
-5U11*motortest 5b11 24l5 24t14
-6m4 Time_Now{6|50M9} 13m6 18r17
-7i4 pwmDelay{integer} 18r42
-X 50 s-bbtime.ads
+5K18*IOsForTasking 91e27 24|1w15 10r16 11r16 12r16 13r16 15r16 16r16 17r16
+. 18r16 20r16 21r16 22r16 23r16 25r16 26r16 27r16 28r16
+22U14*Set 24|10s30 11s30 12s30 13s30 15s30 16s30 17s30 18s30 20s30 21s30
+. 22s30 23s30 25s30 26s30 27s30 28s30
+X 24 motortest.adb
+4U11*motortest 4b11 32l5 32t14
+X 49 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>
-X 53 s-interr.ads
+X 52 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
-X 61 s-secsta.ads
+X 60 s-secsta.ads
 46P9*SS_Stack_Ptr(43R9)
-X 69 s-taskin.ads
-398V13*Get_Sec_Stack{61|46P9} 399i<c,__gnat_get_secondary_stack>22
+X 68 s-taskin.ads
+398V13*Get_Sec_Stack{60|46P9} 399i<c,__gnat_get_secondary_stack>22
 
