@@ -20,7 +20,7 @@ package body tasking is
          CenterSensor := MicroBit.IOsForTasking.Set(6);
          RightSensor := MicroBit.IOsForTasking.Set(7);
 
-         --MicroBit.IOsForTasking.set(10, True); -- Starts the engine
+         MicroBit.IOsForTasking.set(10, True); -- Starts the engine
          delay until clock + Milliseconds(200);
       end loop;
    end ReadSensor;
@@ -32,7 +32,7 @@ package body tasking is
    begin
       loop
          if LeftSensor = True and CenterSensor = False and RightSensor = False then
-            while x < 100 loop
+            if x < 100 then
                MicroBit.IOsForTasking.Set(0, True);
                MicroBit.IOsForTasking.Set(1, False);
                MicroBit.IOsForTasking.Set(2, False);
@@ -54,9 +54,9 @@ package body tasking is
                MicroBit.IOsForTasking.Set(3, True);
                delay until Clock + Microseconds(1750);
                x := x + 1;
-            end loop;
+            end if;
          end if;
-         delay until clock + Milliseconds(450);
+         delay until clock + Microseconds(1750);
       end loop;
    end TurnRight;
 
@@ -67,7 +67,7 @@ package body tasking is
    begin
       loop
          if LeftSensor = False and CenterSensor = False and RightSensor = True then
-            while x > -100 loop
+            if x > -100 then
                MicroBit.IOsForTasking.Set(0, False);
                MicroBit.IOsForTasking.Set(1, False);
                MicroBit.IOsForTasking.Set(2, False);
@@ -89,9 +89,9 @@ package body tasking is
                MicroBit.IOsForTasking.Set(3, False);
                delay until Clock + Microseconds(1750);
                x := x - 1;
-            end loop;
+            end if;
          end if;
-         delay until clock + Milliseconds(450);
+         delay until clock + Microseconds(1750);
       end loop;
    end TurnLEft;
 
@@ -104,7 +104,7 @@ package body tasking is
       loop
          if LeftSensor = False and CenterSensor = False
            and RightSensor = False then
-            while x < 0 and x < 100 loop
+            if x < 0 and x < 100 then
                MicroBit.IOsForTasking.Set(0, True);
                MicroBit.IOsForTasking.Set(1, False);
                MicroBit.IOsForTasking.Set(2, False);
@@ -126,8 +126,8 @@ package body tasking is
                MicroBit.IOsForTasking.Set(3, True);
                delay until Clock + Microseconds(1750);
                x := x + 1;
-            end loop;
-            while x > 0 and x > -100 loop
+            end if;
+            if x > 0 and x > -100 then
                MicroBit.IOsForTasking.Set(0, False);
                MicroBit.IOsForTasking.Set(1, False);
                MicroBit.IOsForTasking.Set(2, False);
@@ -149,9 +149,9 @@ package body tasking is
                MicroBit.IOsForTasking.Set(3, False);
                delay until Clock + Microseconds(1750);
                x := x - 1;
-            end loop;
+            end if;
          end if;
-         delay until clock + Milliseconds(450);
+         delay until clock + Microseconds(1750);
       end loop;
    end DirectCorrection;
 end tasking;

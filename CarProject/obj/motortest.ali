@@ -47,7 +47,7 @@ D hal-uart.ads		20210927093456 d58316b4 hal.uart%s
 D interfac.ads		20210927104346 edec285f interfaces%s
 D microbit.ads		20211101115002 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20211101115002 60e097d3 microbit.iosfortasking%s
-D motortest.adb		20211119112504 14891895 motortest%b
+D motortest.adb		20211121181000 14891895 motortest%b
 D nrf.ads		20210927093454 74cf72f5 nrf%s
 D nrf-device.ads	20210927093454 9c9916c4 nrf.device%s
 D nrf-gpio.ads		20210927093454 ab6d4598 nrf.gpio%s
@@ -105,9 +105,9 @@ X 6 a-reatim.ads
 40K13*Real_Time 181e18 24|3w10 3r29
 50M9*Time<49|46M9>
 60I9*Time_Span<49|81I9>
-67V13*Clock{50M9}<49|134p13> 24|14s19 19s19 24s19 29s19
-71V14*"+"{50M9} 24|14s25 19s25 24s25 29s25
-125V13*Microseconds{60I9} 24|14s27 19s27 24s27 29s27
+67V13*Clock{50M9}<49|134p13> 24|13s19 18s19 23s19 28s19
+71V14*"+"{50M9} 24|13s25 18s25 23s25 28s25
+125V13*Microseconds{60I9} 24|13s27 18s27 23s27 28s27
 X 14 a-textio.ads
 36K13*Text_IO 52e16 24|2w10 2r27
 X 17 hal-gpio.ads
@@ -119,15 +119,15 @@ X 19 hal-spi.ads
 X 20 hal-uart.ads
 48h9*UART_Port
 X 22 microbit.ads
-58K9*MicroBit 112e13 24|1r6 10r7 11r7 12r7 13r7 15r7 16r7 17r7 18r7 20r7
-. 21r7 22r7 23r7 25r7 26r7 27r7 28r7
+58K9*MicroBit 112e13 24|1r6 9r7 10r7 11r7 12r7 14r7 15r7 16r7 17r7 19r7 20r7
+. 21r7 22r7 24r7 25r7 26r7 27r7
 X 23 microbit-iosfortasking.ads
-5K18*IOsForTasking 91e27 24|1w15 10r16 11r16 12r16 13r16 15r16 16r16 17r16
-. 18r16 20r16 21r16 22r16 23r16 25r16 26r16 27r16 28r16
-22U14*Set 24|10s30 11s30 12s30 13s30 15s30 16s30 17s30 18s30 20s30 21s30
-. 22s30 23s30 25s30 26s30 27s30 28s30
+5K18*IOsForTasking 91e27 24|1w15 9r16 10r16 11r16 12r16 14r16 15r16 16r16
+. 17r16 19r16 20r16 21r16 22r16 24r16 25r16 26r16 27r16
+22U14*Set 24|9s30 10s30 11s30 12s30 14s30 15s30 16s30 17s30 19s30 20s30 21s30
+. 22s30 24s30 25s30 26s30 27s30
 X 24 motortest.adb
-4U11*motortest 4b11 32l5 32t14
+4U11*motortest 4b11 31l5 31t14
 X 49 s-bbtime.ads
 46M9*Time
 81I9*Time_Span<long_long_integer>

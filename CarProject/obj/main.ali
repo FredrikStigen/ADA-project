@@ -15,7 +15,7 @@ RV NO_IO
 RV STATIC_PRIORITIES
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U main%b		main.adb		d829c823 NE OO SU IL
+U main%b		main.adb		481c2c4a NE OO SU IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
@@ -46,7 +46,7 @@ D hal-i2c.ads		20210927093456 0ed73138 hal.i2c%s
 D hal-spi.ads		20210927093456 fe139819 hal.spi%s
 D hal-uart.ads		20210927093456 d58316b4 hal.uart%s
 D interfac.ads		20210927104346 edec285f interfaces%s
-D main.adb		20211119142740 cd19e33c main%b
+D main.adb		20211119160950 5d2c0755 main%b
 D microbit.ads		20211101115002 3b54a3e8 microbit%s
 D microbit-iosfortasking.ads  20211101115002 60e097d3 microbit.iosfortasking%s
 D nrf.ads		20210927093454 74cf72f5 nrf%s
@@ -98,11 +98,10 @@ D s-tasres.ads		20210927104348 0c8ef6fb system.tasking.restricted%s
 D s-tarest.ads		20210927104348 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20210927104346 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210927104346 2b077493 system.unsigned_types%s
-D tasking.ads		20211119142544 45f1ddd9 tasking%s
+D tasking.ads		20211121181424 45f1ddd9 tasking%s
 D unchconv.ads		20210927104346 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [main standard 6 11 none]
-G r c none [main standard 6 11 none] [set microbit__iosfortasking 22 14 none]
 X 1 ada.ads
 16K9*Ada 20e8 21|1r6 1r23 2r6 2r25
 X 6 a-reatim.ads
@@ -118,12 +117,11 @@ X 18 hal-spi.ads
 X 19 hal-uart.ads
 48h9*UART_Port
 X 21 main.adb
-6U11*main 6b11 12l5 12t9
+6U11*main 6b11 11l5 11t9
 X 22 microbit.ads
-58K9*MicroBit 21|3r6 10r7 22|112e13
+58K9*MicroBit 21|3r6 22|112e13
 X 23 microbit-iosfortasking.ads
-5K18*IOsForTasking 21|3w15 10r16 23|91e27
-22U14*Set 21|10s30
+5K18*IOsForTasking 21|3w15 23|91e27
 X 51 s-interr.ads
 97U14*Install_Restricted_Handlers_Sequential 98i<c,__gnat_attach_all_handlers>22
 X 59 s-secsta.ads

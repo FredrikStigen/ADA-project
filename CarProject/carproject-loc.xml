@@ -2,7 +2,7 @@
 <Locations >
   <Project>
     <vfs_file />
-    <file_marker column=" 1" line=" 7" >
+    <file_marker column=" 6" line=" 7" >
       <vfs_project />
       <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\src\main.adb</vfs_file>
     </file_marker>
@@ -10,7 +10,7 @@
       <vfs_project />
       <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\src\motortest.adb</vfs_file>
     </file_marker>
-    <file_marker column=" 1" line=" 7" >
+    <file_marker column=" 6" line=" 7" >
       <vfs_project />
       <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\src\main.adb</vfs_file>
     </file_marker>
@@ -18,9 +18,9 @@
       <vfs_project />
       <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\carproject.gpr</vfs_file>
     </file_marker>
-    <file_marker column=" 16" line=" 18" >
+    <file_marker column=" 31" line=" 35" >
       <vfs_project>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\carproject.gpr</vfs_project>
-      <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\src\taskingtest.adb</vfs_file>
+      <vfs_file>C:\Users\Stigen\Documents\GitHub\ADA-project\CarProject\src\tasking.adb</vfs_file>
     </file_marker>
     <file_marker current="true" column=" 1" line=" 1" >
       <vfs_project />

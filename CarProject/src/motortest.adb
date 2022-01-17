@@ -6,7 +6,6 @@ procedure motortest is
 begin
   
    loop
-     
       MicroBit.IOsForTasking.Set(0, False);
       MicroBit.IOsForTasking.Set(1, False);
       MicroBit.IOsForTasking.Set(2, False);

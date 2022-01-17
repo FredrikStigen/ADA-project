@@ -21,7 +21,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV MAX_TASKS=4
 
-U taskingtest%b		taskingtest.adb		3223bc4e OO PK IL
+U taskingtest%b		taskingtest.adb		35fcfa8e OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.real_time.delays%s  a-retide.adb		a-retide.ali
@@ -114,7 +114,7 @@ D s-tarest.ads		20210927104348 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20210927104346 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210927104346 2b077493 system.unsigned_types%s
 D taskingtest.ads	20211119133554 6824bc70 taskingtest%s
-D taskingtest.adb	20211119142546 0ac6f6f8 taskingtest%b
+D taskingtest.adb	20211121183408 0d19b038 taskingtest%b
 D unchconv.ads		20210927104346 ca2f9e18 unchecked_conversion%s
 G a e
 G c b b b [b taskingtest 5 1 none]
@@ -144,9 +144,9 @@ X 6 a-reatim.ads
 . 150s28 154s22
 71V14*"+"{50M9} 74|24s28 40s34 45s34 50s34 55s34 59s28 75s34 80s34 85s34
 . 90s34 94s28 112s34 117s34 122s34 127s34 135s34 140s34 145s34 150s34 154s28
-125V13*Microseconds{60I9} 74|40s36 45s36 50s36 55s36 75s36 80s36 85s36 90s36
-. 112s36 117s36 122s36 127s36 135s36 140s36 145s36 150s36
-127V13*Milliseconds{60I9} 74|24s30 59s30 94s30 154s30
+125V13*Microseconds{60I9} 74|40s36 45s36 50s36 55s36 59s30 75s36 80s36 85s36
+. 90s36 94s30 112s36 117s36 122s36 127s36 135s36 140s36 145s36 150s36 154s30
+127V13*Milliseconds{60I9} 74|24s30
 X 14 a-textio.ads
 36K13*Text_IO 52e16 74|1w10 1r27
 X 17 hal-gpio.ads
@@ -201,6 +201,6 @@ X 74 taskingtest.adb
 6b4 LeftSensor{boolean} 19m10 34r13 69r13 105r13
 7b4 CenterSensor{boolean} 20m10 34r35 69r36 105r36
 8b4 RightSensor{boolean} 21m10 34r60 69r61 106r16
-10i4 x{integer} 35r19 56m16 56r21 70r19 91m16 91r21 107r19 107r29 128m16
-. 128r21 130r19 130r29 151m16 151r21
+10i4 x{integer} 35r16 56m16 56r21 70r16 91m16 91r21 107r16 107r26 128m16
+. 128r21 130r16 130r26 151m16 151r21
 

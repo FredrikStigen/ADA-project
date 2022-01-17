@@ -98,7 +98,7 @@ D s-tarest.ads		20210927104348 c88b6d9a system.tasking.restricted.stages%s
 D s-traent.ads		20210927104346 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210927104346 2b077493 system.unsigned_types%s
 D taskingtest.ads	20211119133554 6824bc70 taskingtest%s
-D test.adb		20211119142546 6e85cd18 test%b
+D test.adb		20211121183408 6e85cd18 test%b
 D unchconv.ads		20210927104346 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [test standard 6 11 none]
@@ -131,5 +131,5 @@ X 69 s-tarest.ads
 X 72 taskingtest.ads
 1K9*taskingtest 6e16 73|4w6
 X 73 test.adb
-6U11*test 6b11 11l5 11t9
+6U11*test 6b11 12l5 12t9
 
